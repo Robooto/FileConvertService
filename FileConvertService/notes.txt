@@ -1,0 +1,32 @@
+﻿Creating service
+
+Making console app and using topshelf
+
+To install use the admin command prompt
+
+Windows 10 windows key + x
+
+Then change the directory to the exe file in the bin debug folder
+
+cd /d incase command prompt won't change
+
+Using topshelp is is just our exe install
+
+update the service by servicename uninstall / install
+
+If you run VS in admin mode you can attach to the service process and debug it through VS!
+
+Send custom commands to service using sc.exe
+
+sc control AwesomeFileConverter 200
+
+
+serviceConfig.RunAs("username", "password")
+serviceConfig.RunAsLocalSystem();
+serviceConfig.RunAsLocalService();
+serviceConfig.RunAsNetworkService();
+serviceConfig.RunAsPrompt(); -- will be prompted on username /password
+
+serviceConfig.StartManually();
+serviceConfig.StartAutomatically();
+serviceConfig.SeartAutomaticallyDelayed();  //add the delay
